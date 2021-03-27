@@ -13,7 +13,6 @@
   <Import Project="$(MSBuildProjectDirectory)\..\..\..\Build\MakeEverythingPublic\MakeEverythingPublic.tasks" />
 
   <ItemGroup>
-    <ProjectReference Include="..\dnSpy.Roslyn.Internal\dnSpy.Roslyn.Internal.csproj" />
     <ProjectReference Include="..\dnSpy.Roslyn\dnSpy.Roslyn.csproj" />
   </ItemGroup>
 

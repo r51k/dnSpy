@@ -34,7 +34,7 @@ namespace dnSpy.Decompiler.ILSpy.Settings {
 		public DecompilerSettings Settings => decompilerSettings;
 		public override Guid ParentGuid => new Guid(AppSettingsConstants.GUID_DECOMPILER);
 		public override Guid Guid => new Guid("8929CE8E-7E2C-4701-A8BA-42F70363872C");
-		public override string Title => "C# / Visual Basic (ILSpy)";
+		public override string Title => "C# (ILSpy)";
 		public override object? UIObject => this;
 
 		public DecompilationObjectVM[] DecompilationObjectsArray => decompilationObjectVMs2;
@@ -119,8 +119,7 @@ namespace dnSpy.Decompiler.ILSpy.Settings {
 			ShowMember			= 0x00000001,
 			ILAst				= 0x00000002,
 			CSharp				= 0x00000004,
-			VB					= 0x00000008,
-			DecompileAll		= ILAst | CSharp | VB,
+			DecompileAll		= ILAst | CSharp,
 		}
 
 		public override void OnApply() => throw new InvalidOperationException();
@@ -181,8 +180,6 @@ namespace dnSpy.Decompiler.ILSpy.Settings {
 				appRefreshSettings.Add(SettingsConstants.REDECOMPILE_ILAST_ILSPY_CODE);
 			if ((flags & RefreshFlags.CSharp) != 0)
 				appRefreshSettings.Add(SettingsConstants.REDECOMPILE_CSHARP_ILSPY_CODE);
-			if ((flags & RefreshFlags.VB) != 0)
-				appRefreshSettings.Add(SettingsConstants.REDECOMPILE_VB_ILSPY_CODE);
 
 			decompilerSettings.CopyTo(_global_decompilerSettings);
 		}

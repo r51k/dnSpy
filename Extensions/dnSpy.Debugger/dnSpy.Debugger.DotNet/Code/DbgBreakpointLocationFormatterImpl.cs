@@ -43,8 +43,6 @@ namespace dnSpy.Debugger.DotNet.Code {
 		internal void RefreshName() => RaiseNameChanged();
 
 		string GetHexPrefix() {
-			if (owner.MethodDecompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return "&H";
 			return "0x";
 		}
 

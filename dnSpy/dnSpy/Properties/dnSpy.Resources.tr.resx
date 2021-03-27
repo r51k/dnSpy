@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1317,9 +1317,6 @@ Filtre Assembly Explorer seçeneklerinden değiştirilebilir.</value>
   </data>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>UTF-8 dizisini kopyala</value>
-  </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Visual Basic dizisini kopyala</value>
   </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Bit ile seçimi doldur...</value>

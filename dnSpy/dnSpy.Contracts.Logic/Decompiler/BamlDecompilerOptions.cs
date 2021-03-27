@@ -33,8 +33,6 @@ namespace dnSpy.Contracts.Decompiler {
 		/// <param name="decompiler">Decompiler</param>
 		/// <returns></returns>
 		public static BamlDecompilerOptions Create(IDecompiler decompiler) {
-			if (decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return CreateVisualBasic();
 			return CreateCSharp();
 		}
 
@@ -44,14 +42,6 @@ namespace dnSpy.Contracts.Decompiler {
 		/// <returns></returns>
 		public static BamlDecompilerOptions CreateCSharp() => new BamlDecompilerOptions {
 			InternalClassModifier = "internal",
-		};
-
-		/// <summary>
-		/// Creates a new instance with VB values
-		/// </summary>
-		/// <returns></returns>
-		public static BamlDecompilerOptions CreateVisualBasic() => new BamlDecompilerOptions {
-			InternalClassModifier = "Friend",
 		};
 
 		/// <summary>

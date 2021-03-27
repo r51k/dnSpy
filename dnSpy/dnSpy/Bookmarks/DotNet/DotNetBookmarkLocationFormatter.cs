@@ -39,8 +39,6 @@ namespace dnSpy.Bookmarks.DotNet {
 		internal void RefreshLocation() => RaiseLocationChanged();
 
 		protected string GetHexPrefix() {
-			if (owner.MethodDecompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return "&H";
 			return "0x";
 		}
 

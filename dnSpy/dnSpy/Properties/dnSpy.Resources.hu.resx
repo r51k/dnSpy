@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1321,9 +1321,6 @@ A szűrő a Szerelvény Böngésző beállításainál módosítható.</value>
   </data>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>UTF-8 karakterlánc másolása</value>
-  </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Visual Basic tömb másolása</value>
   </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Kijelölés feltöltése bájttal...</value>

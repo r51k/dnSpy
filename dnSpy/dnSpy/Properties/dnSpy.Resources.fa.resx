@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1321,9 +1321,6 @@
   </data>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>کپی بعنوان رشته UTF-8</value>
-  </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>کپی بعنوان آرایه ویژوال بیسیک</value>
   </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>پرکردن قسمت انتخاب شده با بایت...</value>

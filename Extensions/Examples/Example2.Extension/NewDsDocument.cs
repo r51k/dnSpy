@@ -81,7 +81,7 @@ namespace Example2.Extension {
 			return false;
 		}
 		static readonly string[] supportedExtensions = new string[] {
-			".txt", ".xml", ".cs", ".vb",
+			".txt", ".xml", ".cs",
 		};
 	}
 

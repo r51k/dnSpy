@@ -113,7 +113,6 @@ namespace dnSpy.Hex.Editor {
 				case HexEditorIds.CopyUnicodeString:
 				case HexEditorIds.CopyUtf8String:
 				case HexEditorIds.CopyValue:
-				case HexEditorIds.CopyVisualBasicArray:
 				case HexEditorIds.DECREASEFILTER:
 				case HexEditorIds.DOWN:
 				case HexEditorIds.DOWN_EXT:
@@ -222,7 +221,6 @@ namespace dnSpy.Hex.Editor {
 				case HexEditorIds.CopyUnicodeString:
 				case HexEditorIds.CopyUtf8String:
 				case HexEditorIds.CopyValue:
-				case HexEditorIds.CopyVisualBasicArray:
 				case HexEditorIds.DELETE:
 				case HexEditorIds.DELETELINE:
 				case HexEditorIds.DELETETOBOL:
@@ -362,10 +360,6 @@ namespace dnSpy.Hex.Editor {
 
 				case HexEditorIds.CopyCSharpArray:
 					EditorOperations.CopySpecial(HexCopySpecialKind.CSharpArray);
-					return CommandTargetStatus.Handled;
-
-				case HexEditorIds.CopyVisualBasicArray:
-					EditorOperations.CopySpecial(HexCopySpecialKind.VisualBasicArray);
 					return CommandTargetStatus.Handled;
 
 				case HexEditorIds.CopyOffset:

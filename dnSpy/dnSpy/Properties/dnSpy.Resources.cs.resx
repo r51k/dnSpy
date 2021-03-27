@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1321,9 +1321,6 @@ Filtr lze změnit v možnostech Průzkumníka sestavení.</value>
   </data>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Kopírovat řetězec UTF-8</value>
-  </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Kopírovat pole jazyka Visual Basic</value>
   </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Vyplnit výběr bajty...</value>

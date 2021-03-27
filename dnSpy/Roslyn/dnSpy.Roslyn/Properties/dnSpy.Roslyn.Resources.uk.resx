@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>Перевірити наявність переповнення/зникнення порядку</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>Вбудувати Visual Basic рантайм</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>Оптимізувати код</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>Представлення Результатів</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>Shared члени</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>Делегати</value>

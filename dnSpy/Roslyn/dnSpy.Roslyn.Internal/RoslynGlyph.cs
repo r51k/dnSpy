@@ -7,9 +7,6 @@ namespace dnSpy.Roslyn.Internal {
 
 		Assembly,
 
-		BasicFile,
-		BasicProject,
-
 		ClassPublic,
 		ClassProtected,
 		ClassPrivate,

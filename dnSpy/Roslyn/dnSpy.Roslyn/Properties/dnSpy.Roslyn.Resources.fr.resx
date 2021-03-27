@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>Vérifier les dépassements de capacité (overflow/underflow)</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>Intégrer le runtime Visual Basic</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>Optimiser le code</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>Résultats</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>Membres partagés</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>Delegates</value>

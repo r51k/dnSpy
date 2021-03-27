@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -255,9 +255,6 @@
   <data name="ShortCutKeyCtrlL" xml:space="preserve">
     <value>Ctrl+L</value>
   </data>
-  <data name="Window_VisualBasic" xml:space="preserve">
-    <value>Visual Basic 交互窗口</value>
-  </data>
   <data name="ShortCutKeyCtrlAltI" xml:space="preserve">
     <value>Ctrl+Alt+I</value>
   </data>
@@ -302,8 +299,5 @@
   </data>
   <data name="CSharpScriptFiles" xml:space="preserve">
     <value>C#脚本文件</value>
-  </data>
-  <data name="VisualBasicScriptFiles" xml:space="preserve">
-    <value>Visual Basic脚本文件</value>
   </data>
 </root>

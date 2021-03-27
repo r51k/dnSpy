@@ -35,7 +35,6 @@ namespace dnSpy.Debugger.DotNet.Code {
 				return DbgCompilerKind.Unknown;
 			switch (compilerName) {
 			case PredefinedCompilerNames.MicrosoftCSharp:		return DbgCompilerKind.MicrosoftCSharp;
-			case PredefinedCompilerNames.MicrosoftVisualBasic:	return DbgCompilerKind.MicrosoftVisualBasic;
 			case PredefinedCompilerNames.MonoCSharp:			return DbgCompilerKind.MonoCSharp;
 			default:
 				Debug.Fail($"Unknown compiler name: {compilerName}");
@@ -103,7 +102,7 @@ namespace dnSpy.Debugger.DotNet.Code {
 			var res = new DbgImportInfo[imports.Length];
 			for (int i = 0; i < res.Length; i++) {
 				var imp = imports[i];
-				res[i] = new DbgImportInfo(ToDbgImportInfoKind(imp.TargetKind), imp.Target, imp.Alias, imp.ExternAlias, ToDbgVBImportScopeKind(imp.VBImportScopeKind));
+				res[i] = new DbgImportInfo(ToDbgImportInfoKind(imp.TargetKind), imp.Target, imp.Alias, imp.ExternAlias);
 			}
 			return res;
 		}
@@ -114,24 +113,9 @@ namespace dnSpy.Debugger.DotNet.Code {
 			case ImportInfoKind.Type:				return DbgImportInfoKind.Type;
 			case ImportInfoKind.NamespaceOrType:	return DbgImportInfoKind.NamespaceOrType;
 			case ImportInfoKind.Assembly:			return DbgImportInfoKind.Assembly;
-			case ImportInfoKind.XmlNamespace:		return DbgImportInfoKind.XmlNamespace;
-			case ImportInfoKind.MethodToken:		return DbgImportInfoKind.MethodToken;
-			case ImportInfoKind.CurrentNamespace:	return DbgImportInfoKind.CurrentNamespace;
-			case ImportInfoKind.DefaultNamespace:	return DbgImportInfoKind.DefaultNamespace;
 			default:
 				Debug.Fail($"Unknown import: {kind}");
 				return (DbgImportInfoKind)(-1);
-			}
-		}
-
-		static DbgVBImportScopeKind ToDbgVBImportScopeKind(VBImportScopeKind kind) {
-			switch (kind) {
-			case VBImportScopeKind.None:		return DbgVBImportScopeKind.None;
-			case VBImportScopeKind.File:		return DbgVBImportScopeKind.File;
-			case VBImportScopeKind.Project:		return DbgVBImportScopeKind.Project;
-			default:
-				Debug.Fail($"Unknown VB import: {kind}");
-				return DbgVBImportScopeKind.None;
 			}
 		}
 

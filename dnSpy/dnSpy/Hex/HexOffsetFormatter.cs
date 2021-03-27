@@ -74,12 +74,6 @@ namespace dnSpy.Hex {
 		}
 	}
 
-	sealed class HexVisualBasicOffsetFormatter : HexOffsetFormatter {
-		public HexVisualBasicOffsetFormatter(int bitSize, bool lowerCaseHex)
-			: base(bitSize, lowerCaseHex, "&H", string.Empty, HexOffsetFormat.HexVisualBasic) {
-		}
-	}
-
 	sealed class HexAssemblyOffsetFormatter : HexOffsetFormatter {
 		public HexAssemblyOffsetFormatter(int bitSize, bool lowerCaseHex)
 			: base(bitSize, lowerCaseHex, string.Empty, "h", HexOffsetFormat.HexAssembly) {

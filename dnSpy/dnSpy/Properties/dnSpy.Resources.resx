@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1321,9 +1321,6 @@ Filter can be changed in Assembly Explorer options.</value>
   </data>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Copy UTF-8 String</value>
-  </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Copy Visual Basic Array</value>
   </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Fill Selection with Byte...</value>

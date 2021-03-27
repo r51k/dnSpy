@@ -36,11 +36,6 @@ namespace dnSpy.Contracts.Hex.Files {
 		HexCSharp						= 0x00000000,
 
 		/// <summary>
-		/// Visual Basic hex numbers (&amp;H56789ABC)
-		/// </summary>
-		HexVisualBasic					= 0x00000001,
-
-		/// <summary>
 		/// Assembly language hex numbers (56789ABCh)
 		/// </summary>
 		HexAssembly						= 0x00000002,

@@ -113,26 +113,6 @@ namespace dnSpy.Contracts.Decompiler {
 	}
 
 	/// <summary>
-	/// Visual Basic import scope kind
-	/// </summary>
-	public enum VBImportScopeKind {
-		/// <summary>
-		/// Unspecified scope
-		/// </summary>
-		None,
-
-		/// <summary>
-		/// File scope
-		/// </summary>
-		File,
-
-		/// <summary>
-		/// Project scope
-		/// </summary>
-		Project,
-	}
-
-	/// <summary>
 	/// Import info
 	/// </summary>
 	public readonly struct ImportInfo {
@@ -140,11 +120,6 @@ namespace dnSpy.Contracts.Decompiler {
 		/// Target kind
 		/// </summary>
 		public ImportInfoKind TargetKind { get; }
-
-		/// <summary>
-		/// Gets the VB import scope kind
-		/// </summary>
-		public VBImportScopeKind VBImportScopeKind { get; }
 
 		/// <summary>
 		/// Target
@@ -168,13 +143,11 @@ namespace dnSpy.Contracts.Decompiler {
 		/// <param name="target">Target string</param>
 		/// <param name="alias">Alias</param>
 		/// <param name="externAlias">Extern alias</param>
-		/// <param name="importScopeKind">VB import scope kind</param>
-		public ImportInfo(ImportInfoKind targetKind, string? target = null, string? alias = null, string? externAlias = null, VBImportScopeKind importScopeKind = VBImportScopeKind.None) {
+		public ImportInfo(ImportInfoKind targetKind, string? target = null, string? alias = null, string? externAlias = null) {
 			TargetKind = targetKind;
 			Target = target;
 			Alias = alias;
 			ExternAlias = externAlias;
-			VBImportScopeKind = importScopeKind;
 		}
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -187,11 +160,6 @@ namespace dnSpy.Contracts.Decompiler {
 		public static ImportInfo CreateAssembly(string externAlias) => new ImportInfo(ImportInfoKind.Assembly, externAlias: externAlias);
 		public static ImportInfo CreateAssembly(string externAlias, string assembly) => new ImportInfo(ImportInfoKind.Assembly, externAlias: externAlias, target: assembly);
 		public static ImportInfo CreateCurrentNamespace() => new ImportInfo(ImportInfoKind.CurrentNamespace, target: string.Empty);
-		public static ImportInfo CreateNamespaceOrType(string namespaceOrType, string alias, VBImportScopeKind importScopeKind) => new ImportInfo(ImportInfoKind.NamespaceOrType, target: namespaceOrType, alias: alias, importScopeKind: importScopeKind);
-		public static ImportInfo CreateXmlNamespace(string xmlNamespace, string alias, VBImportScopeKind importScopeKind) => new ImportInfo(ImportInfoKind.XmlNamespace, target: xmlNamespace, alias: alias, importScopeKind: importScopeKind);
-		public static ImportInfo CreateType(string type, VBImportScopeKind importScopeKind) => new ImportInfo(ImportInfoKind.Type, target: type, importScopeKind: importScopeKind);
-		public static ImportInfo CreateNamespace(string @namespace, VBImportScopeKind importScopeKind) => new ImportInfo(ImportInfoKind.Namespace, target: @namespace, importScopeKind: importScopeKind);
-		public static ImportInfo CreateMethodToken(string token, VBImportScopeKind importScopeKind) => new ImportInfo(ImportInfoKind.MethodToken, target: token, importScopeKind: importScopeKind);
 		public static ImportInfo CreateDefaultNamespace(string @namespace) => new ImportInfo(ImportInfoKind.DefaultNamespace, target: @namespace);
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 	}

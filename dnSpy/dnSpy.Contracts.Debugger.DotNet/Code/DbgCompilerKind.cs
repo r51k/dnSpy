@@ -33,11 +33,6 @@ namespace dnSpy.Contracts.Debugger.DotNet.Code {
 		MicrosoftCSharp,
 
 		/// <summary>
-		/// Microsoft Visual Basic compiler
-		/// </summary>
-		MicrosoftVisualBasic,
-
-		/// <summary>
 		/// Mono C# compiler
 		/// </summary>
 		MonoCSharp,

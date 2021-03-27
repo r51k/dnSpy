@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1320,9 +1320,6 @@
   </data>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>复制 UTF-8 字符串</value>
-  </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>复制 Visual Basic 数组</value>
   </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>用字节填充选择...</value>

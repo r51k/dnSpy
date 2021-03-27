@@ -82,46 +82,6 @@ namespace dnSpy.Contracts.Debugger.DotNet.Code {
 		/// C#: extern alias
 		/// </summary>
 		Assembly,
-
-		/// <summary>
-		/// VB: XML import
-		/// </summary>
-		XmlNamespace,
-
-		/// <summary>
-		/// VB: token of method with imports
-		/// </summary>
-		MethodToken,
-
-		/// <summary>
-		/// VB: containing namespace
-		/// </summary>
-		CurrentNamespace,
-
-		/// <summary>
-		/// VB: root namespace
-		/// </summary>
-		DefaultNamespace,
-	}
-
-	/// <summary>
-	/// Visual Basic import scope kind
-	/// </summary>
-	public enum DbgVBImportScopeKind {
-		/// <summary>
-		/// Unspecified scope
-		/// </summary>
-		None,
-
-		/// <summary>
-		/// File scope
-		/// </summary>
-		File,
-
-		/// <summary>
-		/// Project scope
-		/// </summary>
-		Project,
 	}
 
 	/// <summary>
@@ -132,11 +92,6 @@ namespace dnSpy.Contracts.Debugger.DotNet.Code {
 		/// Target kind
 		/// </summary>
 		public DbgImportInfoKind TargetKind { get; }
-
-		/// <summary>
-		/// Gets the VB import scope kind
-		/// </summary>
-		public DbgVBImportScopeKind VBImportScopeKind { get; }
 
 		/// <summary>
 		/// Target
@@ -160,13 +115,11 @@ namespace dnSpy.Contracts.Debugger.DotNet.Code {
 		/// <param name="target">Target string</param>
 		/// <param name="alias">Alias</param>
 		/// <param name="externAlias">Extern alias</param>
-		/// <param name="importScopeKind">VB import scope kind</param>
-		public DbgImportInfo(DbgImportInfoKind targetKind, string? target = null, string? alias = null, string? externAlias = null, DbgVBImportScopeKind importScopeKind = DbgVBImportScopeKind.None) {
+		public DbgImportInfo(DbgImportInfoKind targetKind, string? target = null, string? alias = null, string? externAlias = null) {
 			TargetKind = targetKind;
 			Target = target;
 			Alias = alias;
 			ExternAlias = externAlias;
-			VBImportScopeKind = importScopeKind;
 		}
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -178,13 +131,6 @@ namespace dnSpy.Contracts.Debugger.DotNet.Code {
 		public static DbgImportInfo CreateNamespaceAlias(string @namespace, string alias, string externAlias) => new DbgImportInfo(DbgImportInfoKind.Namespace, target: @namespace, alias: alias, externAlias: externAlias);
 		public static DbgImportInfo CreateAssembly(string externAlias) => new DbgImportInfo(DbgImportInfoKind.Assembly, externAlias: externAlias);
 		public static DbgImportInfo CreateAssembly(string externAlias, string assembly) => new DbgImportInfo(DbgImportInfoKind.Assembly, externAlias: externAlias, target: assembly);
-		public static DbgImportInfo CreateCurrentNamespace() => new DbgImportInfo(DbgImportInfoKind.CurrentNamespace, target: string.Empty);
-		public static DbgImportInfo CreateNamespaceOrType(string namespaceOrType, string alias, DbgVBImportScopeKind importScopeKind) => new DbgImportInfo(DbgImportInfoKind.NamespaceOrType, target: namespaceOrType, alias: alias, importScopeKind: importScopeKind);
-		public static DbgImportInfo CreateXmlNamespace(string xmlNamespace, string alias, DbgVBImportScopeKind importScopeKind) => new DbgImportInfo(DbgImportInfoKind.XmlNamespace, target: xmlNamespace, alias: alias, importScopeKind: importScopeKind);
-		public static DbgImportInfo CreateType(string type, DbgVBImportScopeKind importScopeKind) => new DbgImportInfo(DbgImportInfoKind.Type, target: type, importScopeKind: importScopeKind);
-		public static DbgImportInfo CreateNamespace(string @namespace, DbgVBImportScopeKind importScopeKind) => new DbgImportInfo(DbgImportInfoKind.Namespace, target: @namespace, importScopeKind: importScopeKind);
-		public static DbgImportInfo CreateMethodToken(string token, DbgVBImportScopeKind importScopeKind) => new DbgImportInfo(DbgImportInfoKind.MethodToken, target: token, importScopeKind: importScopeKind);
-		public static DbgImportInfo CreateDefaultNamespace(string @namespace) => new DbgImportInfo(DbgImportInfoKind.DefaultNamespace, target: @namespace);
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 	}
 }

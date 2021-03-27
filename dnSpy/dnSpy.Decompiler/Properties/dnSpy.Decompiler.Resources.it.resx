@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -242,14 +242,5 @@
   </data>
   <data name="CSharp_Extension_Method" xml:space="preserve">
     <value>extension</value>
-  </data>
-  <data name="VisualBasic_Awaitable_Method" xml:space="preserve">
-    <value>Awaitable</value>
-  </data>
-  <data name="VisualBasic_Deprecated_Member" xml:space="preserve">
-    <value>Deprecated</value>
-  </data>
-  <data name="VisualBasic_Extension_Method" xml:space="preserve">
-    <value>Extension</value>
   </data>
 </root>

@@ -52,7 +52,6 @@ namespace dnSpy.Debugger.DotNet.Evaluation.Engine {
 		readonly Dictionary<Guid, Lazy<DbgDotNetFormatter, IDbgDotNetFormatterMetadata>> formattersDict;
 
 		static readonly Guid csharpDecompilerGuid = new Guid(PredefinedDecompilerGuids.CSharp);
-		static readonly Guid visualBasicDecompilerGuid = new Guid(PredefinedDecompilerGuids.VisualBasic);
 
 		[ImportingConstructor]
 		DbgDotNetLanguageServiceImpl(Lazy<DbgMethodDebugInfoProvider> dbgMethodDebugInfoProvider, Lazy<DbgModuleReferenceProvider> dbgModuleReferenceProvider, Lazy<DbgDotNetEngineValueNodeFactoryService> dbgDotNetEngineValueNodeFactoryService, Lazy<DbgDotNetILInterpreter> dnILInterpreter, Lazy<DbgAliasProvider> dbgAliasProvider, [ImportMany] IEnumerable<Lazy<DbgDotNetExpressionCompiler, IDbgDotNetExpressionCompilerMetadata>> dbgDotNetExpressionCompilers, IDecompilerService decompilerService, IPredefinedEvaluationErrorMessagesHelper predefinedEvaluationErrorMessagesHelper, [ImportMany] IEnumerable<Lazy<DbgDotNetFormatter, IDbgDotNetFormatterMetadata>> dbgDotNetFormatters) {
@@ -102,8 +101,7 @@ namespace dnSpy.Debugger.DotNet.Evaluation.Engine {
 
 				if (decompilerGuid == csharpDecompilerGuid)
 					decompilerGuid = DecompilerConstants.LANGUAGE_CSHARP;
-				else if (decompilerGuid == visualBasicDecompilerGuid)
-					decompilerGuid = DecompilerConstants.LANGUAGE_VISUALBASIC;
+				
 				var decompiler = decompilerService.Find(decompilerGuid);
 				Debug2.Assert(decompiler is not null);
 				if (decompiler is null)

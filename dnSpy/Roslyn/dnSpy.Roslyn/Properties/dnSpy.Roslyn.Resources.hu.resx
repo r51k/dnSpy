@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>Aritmetikai túlcsordulás/alulcsordulás ellenőrzése</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>Visual Basic futtató környezet beágyazása</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>Kód optimalizálása</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>Eredmény nézet</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>Megosztott tagok</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>Delegáltak</value>

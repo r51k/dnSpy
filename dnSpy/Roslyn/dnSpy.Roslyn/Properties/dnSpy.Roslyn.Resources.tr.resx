@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>Aritmetik taşma/yetersizlik durumu denetle</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>Visual Basic çalışma zamanını göm</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>Kodu iyileştir</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>Sonuçların Görünümü</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>Paylaşılan Üyeler</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>Görevlendirmeler</value>

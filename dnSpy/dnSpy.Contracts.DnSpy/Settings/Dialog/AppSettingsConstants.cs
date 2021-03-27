@@ -214,7 +214,7 @@ namespace dnSpy.Contracts.Settings.Dialog {
 		public const double ORDER_ENVIRONMENT_FONT = 1000;
 
 		/// <summary>
-		/// Order of Decompiler / ILSpy C#/VB
+		/// Order of Decompiler / ILSpy C#
 		/// </summary>
 		public const double ORDER_DECOMPILER_SETTINGS_ILSPY_CSHARP = 10000;
 
@@ -227,11 +227,6 @@ namespace dnSpy.Contracts.Settings.Dialog {
 		/// Order of Compiler / C#
 		/// </summary>
 		public const double ORDER_COMPILER_SETTINGS_CSHARP = 10000;
-
-		/// <summary>
-		/// Order of Compiler / Visual Basic
-		/// </summary>
-		public const double ORDER_COMPILER_SETTINGS_VISUALBASIC = 11000;
 
 		/// <summary>
 		/// Start of language options
