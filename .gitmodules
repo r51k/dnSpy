@@ -7,9 +7,6 @@
 [submodule "Plugins/ILSpy.Decompiler/ICSharpCode.Decompiler"]
 	path = Extensions/ILSpy.Decompiler/ICSharpCode.Decompiler
 	url = https://github.com/dnSpy/ILSpy.git
-[submodule "dnSpy/dnSpy.Images"]
-	path = dnSpy/dnSpy.Images
-	url = https://github.com/dnSpy/dnSpy.Images.git
 [submodule "Extensions/dnSpy.Debugger/netcorefiles"]
 	path = Extensions/dnSpy.Debugger/netcorefiles
 	url = https://github.com/dnSpy/netcorefiles.git
