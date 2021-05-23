@@ -1322,9 +1322,6 @@ A szűrő a Szerelvény Böngésző beállításainál módosítható.</value>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>UTF-8 karakterlánc másolása</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Visual Basic tömb másolása</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Kijelölés feltöltése bájttal...</value>
   </data>

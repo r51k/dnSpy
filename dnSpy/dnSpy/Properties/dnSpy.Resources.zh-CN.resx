@@ -1321,9 +1321,6 @@
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>复制 UTF-8 字符串</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>复制 Visual Basic 数组</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>用字节填充选择...</value>
   </data>

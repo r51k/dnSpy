@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>检查算术溢出/下溢</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>嵌入的 Visual Basic runtime</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>优化代码</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>结果视图</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>共享的成员</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>委托</value>

@@ -35,9 +35,6 @@ namespace dnSpy.Hex.Files {
 			case HexNumberOptions.HexCSharp:
 				text = "0x" + text;
 				break;
-			case HexNumberOptions.HexVisualBasic:
-				text = "&H" + text;
-				break;
 			case HexNumberOptions.HexAssembly:
 				text = text + "h";
 				break;

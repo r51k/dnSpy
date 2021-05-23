@@ -29,9 +29,6 @@ namespace dnSpy.Hex.Files.DnSpy {
 			case "CS":
 			case "CSX":
 				return DsImages.CSFileNode;
-			case "VB":
-			case "VBX":
-				return DsImages.VBFileNode;
 			case "TXT":
 				return DsImages.TextFile;
 			case "XAML":

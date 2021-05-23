@@ -37,12 +37,6 @@ namespace dnSpy.Decompiler.ILSpy {
 		static readonly ContentTypeDefinition? CSharpILSpyContentTypeDefinition;
 
 		[Export]
-		[Name(ContentTypesInternal.VisualBasicILSpy)]
-		[BaseDefinition(ContentTypesInternal.DecompilerILSpy)]
-		[BaseDefinition(ContentTypes.VisualBasic)]
-		static readonly ContentTypeDefinition? VisualBasicILSpyContentTypeDefinition;
-
-		[Export]
 		[Name(ContentTypesInternal.ILILSpy)]
 		[BaseDefinition(ContentTypesInternal.DecompilerILSpy)]
 		[BaseDefinition(ContentTypes.IL)]

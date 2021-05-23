@@ -283,13 +283,6 @@ namespace dnSpy.Hex.ContextMenuCommands {
 		}
 	}
 
-	[ExportMenuItem(OwnerGuid = Constants.COPY_SPECIAL_GUID, Header = "res:CopyVisualBasicArrayCommand", InputGestureText = "res:ShortCutKeyCtrlShiftB", Group = Constants.GROUP_COPY_SPECIAL, Order = 40)]
-	sealed class CopyVisualBasicArrayContextMenuEntry : CopyHexViewCommandTargetMenuItemBase {
-		CopyVisualBasicArrayContextMenuEntry()
-			: base(HexEditorIds.CopyVisualBasicArray) {
-		}
-	}
-
 	[ExportMenuItem(OwnerGuid = Constants.COPY_SPECIAL_GUID, Header = "res:CopyTextCommand", InputGestureText = "res:ShortCutKeyCtrlShiftC", Group = Constants.GROUP_COPY_SPECIAL, Order = 50)]
 	sealed class CopyTextContextMenuEntry : CopyHexViewCommandTargetMenuItemBase {
 		CopyTextContextMenuEntry()

@@ -36,11 +36,8 @@ namespace dnSpy.Decompiler.ILSpy.Settings {
 			bool refreshIL = appRefreshSettings.Has(SettingsConstants.REDISASSEMBLE_IL_ILSPY_CODE);
 			bool refreshILAst = appRefreshSettings.Has(SettingsConstants.REDECOMPILE_ILAST_ILSPY_CODE);
 			bool refreshCSharp = appRefreshSettings.Has(SettingsConstants.REDECOMPILE_CSHARP_ILSPY_CODE);
-			bool refreshVB = appRefreshSettings.Has(SettingsConstants.REDECOMPILE_VB_ILSPY_CODE);
 			if (refreshILAst)
-				refreshCSharp = refreshVB = true;
-			if (refreshCSharp)
-				refreshVB = true;
+				refreshCSharp = true;
 
 			if (refreshIL)
 				RefreshCode<Core.IL.ILDecompiler>();
@@ -50,8 +47,6 @@ namespace dnSpy.Decompiler.ILSpy.Settings {
 #endif
 			if (refreshCSharp)
 				RefreshCode<Core.CSharp.CSharpDecompiler>();
-			if (refreshVB)
-				RefreshCode<Core.VisualBasic.VBDecompiler>();
 		}
 
 		IEnumerable<(IDocumentTab tab, IDecompiler decompiler)> DecompilerTabs {

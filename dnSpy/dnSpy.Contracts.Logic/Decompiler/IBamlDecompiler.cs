@@ -33,11 +33,10 @@ namespace dnSpy.Contracts.Decompiler {
 		/// <param name="module">Module</param>
 		/// <param name="data">Baml data</param>
 		/// <param name="token">Cancellation token</param>
-		/// <param name="bamlDecompilerOptions">Options</param>
 		/// <param name="output">Output stream</param>
 		/// <param name="outputOptions">Output options</param>
 		/// <returns></returns>
-		IList<string> Decompile(ModuleDef module, byte[] data, CancellationToken token, BamlDecompilerOptions bamlDecompilerOptions, Stream output, XamlOutputOptions outputOptions);
+		IList<string> Decompile(ModuleDef module, byte[] data, CancellationToken token, Stream output, XamlOutputOptions outputOptions);
 	}
 
 	/// <summary>

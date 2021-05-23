@@ -592,29 +592,11 @@ namespace dnSpy.Scripting.Roslyn.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Visual Basic Script Files.
-        /// </summary>
-        public static string VisualBasicScriptFiles {
-            get {
-                return ResourceManager.GetString("VisualBasicScriptFiles", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to C# Interactive.
         /// </summary>
         public static string Window_CSharp {
             get {
                 return ResourceManager.GetString("Window_CSharp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Visual Basic Interactive.
-        /// </summary>
-        public static string Window_VisualBasic {
-            get {
-                return ResourceManager.GetString("Window_VisualBasic", resourceCulture);
             }
         }
         

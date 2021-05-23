@@ -1320,9 +1320,6 @@ Le filtre peut être changé dans les options de l'explorateur d'Assembly.</valu
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Copier une chaîne UTF-8</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Copier un array Visual Basic</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Remplir la sélection avec un octet...</value>
   </data>

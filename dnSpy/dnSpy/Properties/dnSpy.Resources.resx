@@ -1322,9 +1322,6 @@ Filter can be changed in Assembly Explorer options.</value>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Copy UTF-8 String</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Copy Visual Basic Array</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Fill Selection with Byte...</value>
   </data>

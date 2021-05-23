@@ -43,18 +43,15 @@ namespace dnSpy.BamlDecompiler {
 
 		public ModuleDef Module { get; }
 		public CancellationToken CancellationToken { get; private set; }
-		public BamlDecompilerOptions BamlDecompilerOptions { get; private set; }
-
 		public BamlContext Baml { get; private set; }
 		public BamlNode RootNode { get; private set; }
 		public IDictionary<BamlRecord, BamlBlockNode> NodeMap { get; }
 
 		public XmlnsDictionary XmlNs { get; }
 
-		public static XamlContext Construct(ModuleDef module, BamlDocument document, CancellationToken token, BamlDecompilerOptions bamlDecompilerOptions) {
+		public static XamlContext Construct(ModuleDef module, BamlDocument document, CancellationToken token) {
 			var ctx = new XamlContext(module);
 			ctx.CancellationToken = token;
-			ctx.BamlDecompilerOptions = bamlDecompilerOptions ?? BamlDecompilerOptions.CreateCSharp();
 
 			ctx.Baml = BamlContext.ConstructContext(module, document, token);
 			ctx.RootNode = BamlNode.Parse(document, token);

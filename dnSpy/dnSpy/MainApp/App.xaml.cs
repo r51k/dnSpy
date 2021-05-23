@@ -301,8 +301,6 @@ namespace dnSpy.MainApp {
 			list.Add(typeof(Roslyn.EditorFeatures.Dummy).Assembly);
 			// dnSpy.Roslyn.CSharp.EditorFeatures
 			list.Add(typeof(Roslyn.CSharp.EditorFeatures.Dummy).Assembly);
-			// dnSpy.Roslyn.VisualBasic.EditorFeatures
-			list.Add(typeof(Roslyn.VisualBasic.EditorFeatures.Dummy).Assembly);
 			foreach (var asm in LoadExtensionAssemblies())
 				list.Add(asm);
 			return list.ToArray();

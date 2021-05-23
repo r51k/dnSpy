@@ -1322,9 +1322,6 @@ Der Filter kann in den Assembly-Explorer-Optionen geändert werden.</value>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>UTF-8-Zeichenfolge kopieren</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Visual-Basic-Array kopieren</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Auswahl mit Byte füllen...</value>
   </data>

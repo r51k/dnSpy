@@ -1322,9 +1322,6 @@ Filtr lze změnit v možnostech Průzkumníka sestavení.</value>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Kopírovat řetězec UTF-8</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Kopírovat pole jazyka Visual Basic</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Vyplnit výběr bajty...</value>
   </data>

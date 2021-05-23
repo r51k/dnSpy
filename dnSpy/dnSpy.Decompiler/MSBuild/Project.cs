@@ -65,23 +65,11 @@ namespace dnSpy.Decompiler.MSBuild {
 			Filename = Path.Combine(projDir, Path.GetFileName(projDir) + options.Decompiler.ProjectFileExtension);
 			AssemblyName = options.Module.Assembly is null ? string.Empty : options.Module.Assembly.Name.String;
 			ProjectTypeGuids = new HashSet<Guid>();
-			PropertiesFolder = CalculatePropertiesFolder();
+			PropertiesFolder = "Properties";
 			ExtraAssemblyReferences = new HashSet<string>();
-			LanguageGuid = CalculateLanguageGuid(options.Decompiler);
-		}
 
-		static Guid CalculateLanguageGuid(IDecompiler decompiler) {
-			if (decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return new Guid("F184B08F-C81C-45F6-A57F-5ABD9991F28F");
-
-			Debug.Assert(decompiler.GenericGuid == DecompilerConstants.LANGUAGE_CSHARP);
-			return new Guid("FAE04EC0-301F-11D3-BF4B-00C04F79EFBC");
-		}
-
-		string CalculatePropertiesFolder() {
-			if (Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return "My Project";
-			return "Properties";
+			Debug.Assert(options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_CSHARP);
+			LanguageGuid = new Guid("FAE04EC0-301F-11D3-BF4B-00C04F79EFBC");
 		}
 
 		public void CreateProjectFiles(DecompileContext ctx) {
@@ -308,9 +296,7 @@ namespace dnSpy.Decompiler.MSBuild {
 
 			if (hasXamlClasses || ReferencesWPFClasses()) {
 				ProjectTypeGuids.Add(new Guid("60DC8134-EBA5-43B8-BCC9-BB4BC16C2548"));
-				if (Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-					ProjectTypeGuids.Add(new Guid("F184B08F-C81C-45F6-A57F-5ABD9991F28F"));
-				else if (Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_CSHARP)
+				if (Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_CSHARP)
 					ProjectTypeGuids.Add(new Guid("FAE04EC0-301F-11D3-BF4B-00C04F79EFBC"));
 			}
 		}

@@ -29,10 +29,10 @@ using dnSpy.Contracts.Decompiler;
 namespace dnSpy.BamlDecompiler {
 	[Export(typeof(IBamlDecompiler))]
 	sealed class BamlDecompiler : IBamlDecompiler {
-		public IList<string> Decompile(ModuleDef module, byte[] data, CancellationToken token, BamlDecompilerOptions bamlDecompilerOptions, Stream output, XamlOutputOptions outputOptions) {
+		public IList<string> Decompile(ModuleDef module, byte[] data, CancellationToken token, Stream output, XamlOutputOptions outputOptions) {
 			var doc = BamlReader.ReadDocument(new MemoryStream(data), token);
 			var asmRefs = new List<string>();
-			var xaml = new XamlDecompiler().Decompile(module, doc, token, bamlDecompilerOptions, asmRefs);
+			var xaml = new XamlDecompiler().Decompile(module, doc, token, asmRefs);
 			var resData = Encoding.UTF8.GetBytes(new XamlOutputCreator(outputOptions).CreateText(xaml));
 			output.Write(resData, 0, resData.Length);
 			return asmRefs;

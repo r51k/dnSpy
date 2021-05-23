@@ -1321,9 +1321,6 @@
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Копировать строку UTF-8</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Копировать массив VB</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Заполнить выделенное байтом...</value>
   </data>

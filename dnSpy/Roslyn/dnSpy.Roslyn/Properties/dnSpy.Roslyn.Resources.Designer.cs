@@ -88,15 +88,6 @@ namespace dnSpy.Roslyn.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Embed Visual Basic runtime.
-        /// </summary>
-        public static string CompilerSettings_EmbedVBRuntime {
-            get {
-                return ResourceManager.GetString("CompilerSettings_EmbedVBRuntime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Optimize code.
         /// </summary>
         public static string CompilerSettings_Optimize {
@@ -246,15 +237,6 @@ namespace dnSpy.Roslyn.Properties {
         public static string DebuggerVarsWindow_ResultsView {
             get {
                 return ResourceManager.GetString("DebuggerVarsWindow_ResultsView", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Shared members.
-        /// </summary>
-        public static string DebuggerVarsWindow_VisualBasic_SharedMembers {
-            get {
-                return ResourceManager.GetString("DebuggerVarsWindow_VisualBasic_SharedMembers", resourceCulture);
             }
         }
         

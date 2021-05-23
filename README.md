@@ -40,7 +40,7 @@ To debug Unity games, you need this repo too: https://github.com/dnSpy/dnSpy-Uni
 - Export/import breakpoints and tracepoints
 - Call stack, threads, modules, processes windows
 - Break on thrown exceptions (1st chance)
-- Variables windows support evaluating C# / Visual Basic expressions
+- Variables windows support evaluating C# expressions
 - Dynamic modules can be debugged (but not dynamic methods due to CLR limitations)
 - Output window logs various debugging events, and it shows timestamps by default :)
 - Assemblies that decrypt themselves at runtime can be debugged, dnSpy will use the in-memory image. You can also force dnSpy to always use in-memory images instead of disk files.
@@ -49,8 +49,8 @@ To debug Unity games, you need this repo too: https://github.com/dnSpy/dnSpy-Uni
 # Assembly Editor
 
 - All metadata can be edited
-- Edit methods and classes in C# or Visual Basic with IntelliSense, no source code required
-- Add new methods, classes or members in C# or Visual Basic
+- Edit methods and classes in C# with IntelliSense, no source code required
+- Add new methods, classes or members in C#
 - IL editor for low-level IL method body editing
 - Low-level metadata tables can be edited. This uses the hex editor internally.
 
@@ -76,13 +76,13 @@ To debug Unity games, you need this repo too: https://github.com/dnSpy/dnSpy-Uni
 - References are highlighted, use Tab / Shift+Tab to move to the next reference
 - Go to the entry point and module initializer commands
 - Go to metadata token or metadata row commands
-- Code tooltips (C# and Visual Basic)
+- Code tooltips
 - Export to project
 
 # List of other open source libraries used by dnSpy
 
-- [ILSpy decompiler engine](https://github.com/icsharpcode/ILSpy) (C# and Visual Basic decompilers)
-- [Roslyn](https://github.com/dotnet/roslyn) (C# and Visual Basic compilers)
+- [ILSpy decompiler engine](https://github.com/icsharpcode/ILSpy) (C# decompiler)
+- [Roslyn](https://github.com/dotnet/roslyn) (C# compiler)
 - [dnlib](https://github.com/0xd4d/dnlib) (.NET metadata reader/writer which can also read obfuscated assemblies)
 - [VS MEF](https://github.com/microsoft/vs-mef) (Faster MEF equals faster startup)
 - [ClrMD](https://github.com/microsoft/clrmd) (Access to lower level debugging info not provided by the CorDebug API)

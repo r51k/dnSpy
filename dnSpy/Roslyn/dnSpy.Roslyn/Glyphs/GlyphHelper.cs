@@ -27,8 +27,6 @@ namespace dnSpy.Roslyn.Glyphs {
 			switch (glyph) {
 			case Glyph.None:					return null;
 			case Glyph.Assembly:				return DsImages.Assembly;
-			case Glyph.BasicFile:				return DsImages.VBFileNode;
-			case Glyph.BasicProject:			return DsImages.VBProjectNode;
 			case Glyph.ClassPublic:				return DsImages.ClassPublic;
 			case Glyph.ClassProtected:			return DsImages.ClassProtected;
 			case Glyph.ClassPrivate:			return DsImages.ClassPrivate;

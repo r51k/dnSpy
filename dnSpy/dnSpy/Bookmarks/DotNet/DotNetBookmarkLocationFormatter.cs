@@ -38,14 +38,8 @@ namespace dnSpy.Bookmarks.DotNet {
 
 		internal void RefreshLocation() => RaiseLocationChanged();
 
-		protected string GetHexPrefix() {
-			if (owner.MethodDecompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return "&H";
-			return "0x";
-		}
-
 		void WriteToken(ITextColorWriter output, uint token) =>
-			output.Write(BoxedTextColor.Number, GetHexPrefix() + token.ToString("X8"));
+			output.Write(BoxedTextColor.Number, $"0x{token.ToString("X8")}");
 
 		public override void WriteLocation(ITextColorWriter output, BookmarkLocationFormatterOptions options) {
 			bool printedToken = false;
@@ -105,9 +99,9 @@ namespace dnSpy.Bookmarks.DotNet {
 		void WriteILOffset(ITextColorWriter output, uint offset) {
 			// Offsets are always in hex
 			if (offset <= ushort.MaxValue)
-				output.Write(BoxedTextColor.Number, GetHexPrefix() + offset.ToString("X4"));
+				output.Write(BoxedTextColor.Number, $"0x{offset.ToString("X4")}");
 			else
-				output.Write(BoxedTextColor.Number, GetHexPrefix() + offset.ToString("X8"));
+				output.Write(BoxedTextColor.Number, $"0x{offset.ToString("X8")}");
 		}
 
 		protected override bool WriteLocationCore(ITextColorWriter output, BookmarkLocationFormatterOptions options) {

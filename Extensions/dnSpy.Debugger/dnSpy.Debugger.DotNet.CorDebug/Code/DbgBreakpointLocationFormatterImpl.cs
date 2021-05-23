@@ -42,22 +42,16 @@ namespace dnSpy.Debugger.DotNet.CorDebug.Code {
 
 		internal void RefreshName() => RaiseNameChanged();
 
-		string GetHexPrefix() {
-			if (owner.MethodDecompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return "&H";
-			return "0x";
-		}
-
 		void WriteILOffset(IDbgTextWriter output, uint offset) {
 			// Offsets are always in hex
 			if (offset <= ushort.MaxValue)
-				output.Write(DbgTextColor.Number, GetHexPrefix() + offset.ToString("X4"));
+				output.Write(DbgTextColor.Number, $"0x{offset.ToString("X4")}");
 			else
-				output.Write(DbgTextColor.Number, GetHexPrefix() + offset.ToString("X8"));
+				output.Write(DbgTextColor.Number, $"0x{offset.ToString("X8")}");
 		}
 
 		void WriteToken(IDbgTextWriter output, uint token) =>
-			output.Write(DbgTextColor.Number, GetHexPrefix() + token.ToString("X8"));
+			output.Write(DbgTextColor.Number, $"0x{token.ToString("X8")}");
 
 		public override void WriteName(IDbgTextWriter output, DbgBreakpointLocationFormatterOptions options) {
 			bool printedToken = false;
@@ -112,12 +106,12 @@ namespace dnSpy.Debugger.DotNet.CorDebug.Code {
 
 			output.Write(DbgTextColor.Text, " ");
 			output.Write(DbgTextColor.Punctuation, "(");
-			output.Write(DbgTextColor.Number, GetHexPrefix() + location.NativeAddress.Address.ToString("X8"));
+			output.Write(DbgTextColor.Number, $"0x{location.NativeAddress.Address.ToString("X8")}");
 			output.Write(DbgTextColor.Operator, "+");
 			output.Write(DbgTextColor.Number,
-				(options & DbgBreakpointLocationFormatterOptions.Decimal) != 0 ?
-				location.NativeAddress.Offset.ToString() :
-				GetHexPrefix() + location.NativeAddress.Offset.ToString("X"));
+				(options & DbgBreakpointLocationFormatterOptions.Decimal) != 0
+					? location.NativeAddress.Offset.ToString()
+					: $"0x{location.NativeAddress.Offset.ToString("X")}");
 			output.Write(DbgTextColor.Punctuation, ")");
 		}
 

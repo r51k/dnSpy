@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>Kontrolovat aritmetické přetečení a podtečení</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>Vložit Visual Basic runtime</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>Optimalizovat kód</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>Zobrazení výsledků</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>Sdílené členy</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>Delegáti</value>

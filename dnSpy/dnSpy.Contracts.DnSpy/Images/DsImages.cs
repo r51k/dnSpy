@@ -262,9 +262,6 @@ namespace dnSpy.Contracts.Images {
 		public static ImageReference Undo { get; } = new ImageReference(assembly, DsImageStrings.Undo);
 		public static ImageReference UndoCheckBoxList { get; } = new ImageReference(assembly, DsImageStrings.UndoCheckBoxList);
 		public static ImageReference UserDefinedDataType { get; } = new ImageReference(assembly, DsImageStrings.UserDefinedDataType);
-		public static ImageReference VBFileNode { get; } = new ImageReference(assembly, DsImageStrings.VBFileNode);
-		public static ImageReference VBInteractiveWindow { get; } = new ImageReference(assembly, DsImageStrings.VBInteractiveWindow);
-		public static ImageReference VBProjectNode { get; } = new ImageReference(assembly, DsImageStrings.VBProjectNode);
 		public static ImageReference Watch { get; } = new ImageReference(assembly, DsImageStrings.Watch);
 		public static ImageReference WordWrap { get; } = new ImageReference(assembly, DsImageStrings.WordWrap);
 		public static ImageReference WPFFile { get; } = new ImageReference(assembly, DsImageStrings.WPFFile);

@@ -83,11 +83,6 @@ namespace dnSpy.Contracts.Text {
 		public const string CSharp = "C#-code";
 
 		/// <summary>
-		/// Visual Basic code
-		/// </summary>
-		public const string VisualBasic = "VB-code";
-
-		/// <summary>
 		/// IL code
 		/// </summary>
 		public const string IL = "MSIL";
@@ -108,11 +103,6 @@ namespace dnSpy.Contracts.Text {
 		public const string CSharpRoslyn = "CSharp";
 
 		/// <summary>
-		/// Visual Basic (Roslyn)
-		/// </summary>
-		public const string VisualBasicRoslyn = "Basic";
-
-		/// <summary>
 		/// Decompiled code
 		/// </summary>
 		public const string DecompiledCode = "Decompiled Code";
@@ -131,11 +121,6 @@ namespace dnSpy.Contracts.Text {
 		/// REPL C# (Roslyn)
 		/// </summary>
 		public const string ReplCSharpRoslyn = "REPL C# Roslyn";
-
-		/// <summary>
-		/// REPL Visual Basic (Roslyn)
-		/// </summary>
-		public const string ReplVisualBasicRoslyn = "REPL VB Roslyn";
 
 		/// <summary>
 		/// Output window
