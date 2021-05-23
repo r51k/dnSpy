@@ -244,9 +244,6 @@
     <Resource Include="Images\Undo.16.16.png" />
     <Resource Include="Images\UndoCheckBoxList.16.16.png" />
     <Resource Include="Images\UserDefinedDataType.16.16.png" />
-    <Resource Include="Images\VBFileNode.16.16.png" />
-    <Resource Include="Images\VBInteractiveWindow.16.16.png" />
-    <Resource Include="Images\VBProjectNode.16.16.png" />
     <Resource Include="Images\Watch.16.16.png" />
     <Resource Include="Images\WordWrap.16.16.png" />
     <Resource Include="Images\WPFFile.16.16.png" />

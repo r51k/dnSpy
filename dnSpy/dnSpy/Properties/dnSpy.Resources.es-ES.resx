@@ -1321,9 +1321,6 @@
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>Copiar cadena UTF-8</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Copia de matriz Visual Basic</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Rellenar la selección con el Byte...</value>
   </data>

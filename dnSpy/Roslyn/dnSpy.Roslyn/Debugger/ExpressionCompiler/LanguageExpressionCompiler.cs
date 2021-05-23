@@ -188,7 +188,6 @@ namespace dnSpy.Roslyn.Debugger.ExpressionCompiler {
 			switch (compiler) {
 			case DbgCompilerKind.Unknown:				return CompilerKind.Unknown;
 			case DbgCompilerKind.MicrosoftCSharp:		return CompilerKind.MicrosoftCSharp;
-			case DbgCompilerKind.MicrosoftVisualBasic:	return CompilerKind.MicrosoftVisualBasic;
 			case DbgCompilerKind.MonoCSharp:			return CompilerKind.MonoCSharp;
 			default:
 				Debug.Fail($"Unknown compiler: {compiler}");
@@ -234,8 +233,6 @@ namespace dnSpy.Roslyn.Debugger.ExpressionCompiler {
 			switch (compiler) {
 			case CompilerKind.MicrosoftCSharp:
 				return CSharp.GeneratedNamesHelpers.TryGetHoistedLocalSlotIndex(name, out slotIndex);
-			case CompilerKind.MicrosoftVisualBasic:
-				return VisualBasic.GeneratedNamesHelpers.TryGetHoistedLocalSlotIndex(name, out slotIndex);
 			case CompilerKind.MonoCSharp:
 				return CSharp.MonoGeneratedNamesHelpers.TryGetHoistedLocalSlotIndex(name, out slotIndex);
 			case CompilerKind.Unknown:
@@ -246,8 +243,6 @@ namespace dnSpy.Roslyn.Debugger.ExpressionCompiler {
 			}
 
 			if (CSharp.GeneratedNamesHelpers.TryGetHoistedLocalSlotIndex(name, out slotIndex))
-				return true;
-			if (VisualBasic.GeneratedNamesHelpers.TryGetHoistedLocalSlotIndex(name, out slotIndex))
 				return true;
 			return CSharp.MonoGeneratedNamesHelpers.TryGetHoistedLocalSlotIndex(name, out slotIndex);
 		}

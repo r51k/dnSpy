@@ -105,8 +105,7 @@ namespace dnSpy.Decompiler.MSBuild {
 				writer.WriteAttributeString("x", "Class", "http://schemas.microsoft.com/winfx/2006/xaml", type.ReflectionFullName);
 
 				if (type.IsNotPublic) {
-					var opts = BamlDecompilerOptions.Create(decompiler);
-					writer.WriteAttributeString("x", "ClassModifier", "http://schemas.microsoft.com/winfx/2006/xaml", opts.InternalClassModifier);
+					writer.WriteAttributeString("x", "ClassModifier", "http://schemas.microsoft.com/winfx/2006/xaml", "internal");
 				}
 
 				var body = GetInitializeComponentBody();

@@ -956,14 +956,13 @@ namespace dnSpy_Console {
 			proj.UnpackResources = unpackResources;
 			proj.CreateResX = createResX;
 			proj.DecompileXaml = decompileBaml && bamlDecompiler is not null;
-			var o = BamlDecompilerOptions.Create(GetLanguage());
 			var outputOptions = new XamlOutputOptions {
 				IndentChars = "\t",
 				NewLineChars = Environment.NewLine,
 				NewLineOnAttributes = true,
 			};
 			if (bamlDecompiler is not null)
-				proj.DecompileBaml = (a, b, c, d) => bamlDecompiler.Decompile(a, b, c, o, d, outputOptions);
+				proj.DecompileBaml = (a, b, c, d) => bamlDecompiler.Decompile(a, b, c, d, outputOptions);
 			return proj;
 		}
 

@@ -409,11 +409,6 @@ namespace dnSpy.Contracts.Hex.Operations {
 		CSharpArray,
 
 		/// <summary>
-		/// Visual Basic array
-		/// </summary>
-		VisualBasicArray,
-
-		/// <summary>
 		/// Offset
 		/// </summary>
 		Offset,

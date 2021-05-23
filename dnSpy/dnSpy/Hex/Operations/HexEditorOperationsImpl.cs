@@ -696,7 +696,6 @@ namespace dnSpy.Hex.Operations {
 			case HexCopySpecialKind.Utf8String:				return CopyUtf8String();
 			case HexCopySpecialKind.UnicodeString:			return CopyUnicodeString();
 			case HexCopySpecialKind.CSharpArray:			return CopyCSharpArray();
-			case HexCopySpecialKind.VisualBasicArray:		return CopyVisualBasicArray();
 			case HexCopySpecialKind.Offset:					return CopyOffset();
 			case HexCopySpecialKind.Value:					return CopyValue();
 			case HexCopySpecialKind.UInt16:					return CopyUInt16();
@@ -723,7 +722,6 @@ namespace dnSpy.Hex.Operations {
 		}
 
 		bool CopyCSharpArray() => CopyArray(Selection.StreamSelectionSpan, "0x", string.Empty, "new byte[] {", "};", string.Empty);
-		bool CopyVisualBasicArray() => CopyArray(Selection.StreamSelectionSpan, "&H", string.Empty, "New Byte() {", "}", " _");
 
 		bool CopyArray(HexBufferSpan span, string numberPrefix, string numberSuffix, string allocStringStart, string allocStringEnd, string eol) {
 			if (span.Length > bytesMaxTotalBytesToCopy)

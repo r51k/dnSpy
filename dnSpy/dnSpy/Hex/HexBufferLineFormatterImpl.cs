@@ -429,7 +429,6 @@ namespace dnSpy.Hex {
 			switch (format) {
 			case HexOffsetFormat.Hex:				return new OnlyHexOffsetFormatter(bitSize, lowerCaseHex);
 			case HexOffsetFormat.HexCSharp:			return new HexCSharpOffsetFormatter(bitSize, lowerCaseHex);
-			case HexOffsetFormat.HexVisualBasic:	return new HexVisualBasicOffsetFormatter(bitSize, lowerCaseHex);
 			case HexOffsetFormat.HexAssembly:		return new HexAssemblyOffsetFormatter(bitSize, lowerCaseHex);
 			default: throw new ArgumentOutOfRangeException(nameof(bitSize));
 			}

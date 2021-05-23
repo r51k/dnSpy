@@ -39,8 +39,8 @@ namespace dnSpy.BamlDecompiler {
 			new DocumentRewritePass(),
 		};
 
-		public XDocument Decompile(ModuleDef module, BamlDocument document, CancellationToken token, BamlDecompilerOptions bamlDecompilerOptions, List<string> assemblyReferences) {
-			var ctx = XamlContext.Construct(module, document, token, bamlDecompilerOptions);
+		public XDocument Decompile(ModuleDef module, BamlDocument document, CancellationToken token, List<string> assemblyReferences) {
+			var ctx = XamlContext.Construct(module, document, token);
 
 			var handler = HandlerMap.LookupHandler(ctx.RootNode.Type);
 			var elem = handler.Translate(ctx, ctx.RootNode, null);

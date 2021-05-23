@@ -259,9 +259,6 @@ namespace dnSpy.Contracts.Images {
 		public const string Undo = Prefix + DsImageStrings.Undo;
 		public const string UndoCheckBoxList = Prefix + DsImageStrings.UndoCheckBoxList;
 		public const string UserDefinedDataType = Prefix + DsImageStrings.UserDefinedDataType;
-		public const string VBFileNode = Prefix + DsImageStrings.VBFileNode;
-		public const string VBInteractiveWindow = Prefix + DsImageStrings.VBInteractiveWindow;
-		public const string VBProjectNode = Prefix + DsImageStrings.VBProjectNode;
 		public const string Watch = Prefix + DsImageStrings.Watch;
 		public const string WordWrap = Prefix + DsImageStrings.WordWrap;
 		public const string WPFFile = Prefix + DsImageStrings.WPFFile;

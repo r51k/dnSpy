@@ -258,9 +258,6 @@ namespace dnSpy.Contracts.Images {
 		public const string Undo = nameof(Undo);
 		public const string UndoCheckBoxList = nameof(UndoCheckBoxList);
 		public const string UserDefinedDataType = nameof(UserDefinedDataType);
-		public const string VBFileNode = nameof(VBFileNode);
-		public const string VBInteractiveWindow = nameof(VBInteractiveWindow);
-		public const string VBProjectNode = nameof(VBProjectNode);
 		public const string Watch = nameof(Watch);
 		public const string WordWrap = nameof(WordWrap);
 		public const string WPFFile = nameof(WPFFile);

@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>بررسی overflow/underflow محاسباتی</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>رانتایم جاسازی شده ویژوال بیسیک</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>بهینه سازی کد</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>مشاهده نتایج</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>اعضای مشترک شده</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>دلگیت ها</value>

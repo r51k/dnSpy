@@ -269,10 +269,6 @@ namespace dnSpy.Contracts.Command {
 		/// </summary>
 		CopyCSharpArray,
 		/// <summary>
-		/// Copies data (Visual Basic array)
-		/// </summary>
-		CopyVisualBasicArray,
-		/// <summary>
 		/// Copies the offset
 		/// </summary>
 		CopyOffset,

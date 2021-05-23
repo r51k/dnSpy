@@ -1117,15 +1117,6 @@ namespace dnSpy.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copy Visual Basic Array.
-        /// </summary>
-        public static string CopyVisualBasicArrayCommand {
-            get {
-                return ResourceManager.GetString("CopyVisualBasicArrayCommand", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Could not start browser.
         /// </summary>
         public static string CouldNotStartBrowser {

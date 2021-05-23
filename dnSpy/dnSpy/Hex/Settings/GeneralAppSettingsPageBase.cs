@@ -117,7 +117,6 @@ namespace dnSpy.Hex.Settings {
 		static readonly EnumVM[] hexOffsetFormatList = new EnumVM[] {
 			new EnumVM(HexOffsetFormat.Hex, "6789ABCD"),
 			new EnumVM(HexOffsetFormat.HexCSharp, "0x6789ABCD"),
-			new EnumVM(HexOffsetFormat.HexVisualBasic, "&H6789ABCD"),
 			new EnumVM(HexOffsetFormat.HexAssembly, "6789ABCDh"),
 		};
 

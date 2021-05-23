@@ -35,7 +35,6 @@ namespace dnSpy.Debugger.DotNet.Code {
 				return DbgCompilerKind.Unknown;
 			switch (compilerName) {
 			case PredefinedCompilerNames.MicrosoftCSharp:		return DbgCompilerKind.MicrosoftCSharp;
-			case PredefinedCompilerNames.MicrosoftVisualBasic:	return DbgCompilerKind.MicrosoftVisualBasic;
 			case PredefinedCompilerNames.MonoCSharp:			return DbgCompilerKind.MonoCSharp;
 			default:
 				Debug.Fail($"Unknown compiler name: {compilerName}");

@@ -126,9 +126,6 @@
   <data name="CompilerSettings_CheckOverflow" xml:space="preserve">
     <value>Verificar estouro aritmético/estouro negativo</value>
   </data>
-  <data name="CompilerSettings_EmbedVBRuntime" xml:space="preserve">
-    <value>Incorporar o tempo de execução do Visual Basic</value>
-  </data>
   <data name="CompilerSettings_Optimize" xml:space="preserve">
     <value>Otimizar o código</value>
   </data>
@@ -179,9 +176,6 @@
   </data>
   <data name="DebuggerVarsWindow_ResultsView" xml:space="preserve">
     <value>Exibição de resultados</value>
-  </data>
-  <data name="DebuggerVarsWindow_VisualBasic_SharedMembers" xml:space="preserve">
-    <value>Membros compartilhados</value>
   </data>
   <data name="DelegatesToolTip" xml:space="preserve">
     <value>Delegates</value>

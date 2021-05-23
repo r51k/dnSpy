@@ -186,9 +186,8 @@ namespace dnSpy.Documents.Tabs {
 							ProjectGuid = hasProjectGuid ? new Guid(string.Format(guidFormat!, guidNum++)) : Guid.NewGuid(),
 						};
 						if (bamlDecompiler is not null) {
-							var o = BamlDecompilerOptions.Create(vm.Decompiler.Decompiler);
 							var outputOptions = xamlOutputOptionsProvider?.Default ?? new XamlOutputOptions();
-							projOpts.DecompileBaml = (a, b, c, d) => bamlDecompiler.Decompile(a, b, c, o, d, outputOptions);
+							projOpts.DecompileBaml = (a, b, c, d) => bamlDecompiler.Decompile(a, b, c, d, outputOptions);
 						}
 						options.ProjectModules.Add(projOpts);
 					}

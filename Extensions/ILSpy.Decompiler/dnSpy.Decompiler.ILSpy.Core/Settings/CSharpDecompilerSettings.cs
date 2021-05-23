@@ -27,14 +27,14 @@ using dnSpy.Decompiler.Settings;
 using ICSharpCode.Decompiler;
 
 namespace dnSpy.Decompiler.ILSpy.Core.Settings {
-	sealed class CSharpVBDecompilerSettings : DecompilerSettingsBase {
+	sealed class CSharpDecompilerSettings : DecompilerSettingsBase {
 		public DecompilerSettings Settings => decompilerSettings;
 		readonly DecompilerSettings decompilerSettings;
 
 		public override int Version => decompilerSettings.SettingsVersion;
 		public override event EventHandler? VersionChanged;
 
-		public CSharpVBDecompilerSettings(DecompilerSettings? decompilerSettings = null) {
+		public CSharpDecompilerSettings(DecompilerSettings? decompilerSettings = null) {
 			this.decompilerSettings = decompilerSettings ?? new DecompilerSettings();
 			options = CreateOptions().ToArray();
 			this.decompilerSettings.SettingsVersionChanged += DecompilerSettings_SettingsVersionChanged;
@@ -42,7 +42,7 @@ namespace dnSpy.Decompiler.ILSpy.Core.Settings {
 
 		void DecompilerSettings_SettingsVersionChanged(object? sender, EventArgs e) => VersionChanged?.Invoke(this, EventArgs.Empty);
 
-		public override DecompilerSettingsBase Clone() => new CSharpVBDecompilerSettings(decompilerSettings.Clone());
+		public override DecompilerSettingsBase Clone() => new CSharpDecompilerSettings(decompilerSettings.Clone());
 
 		public override IEnumerable<IDecompilerOption> Options => options;
 		readonly IDecompilerOption[] options;
@@ -272,7 +272,7 @@ namespace dnSpy.Decompiler.ILSpy.Core.Settings {
 		}
 
 		public override bool Equals(object? obj) {
-			var other = obj as CSharpVBDecompilerSettings;
+			var other = obj as CSharpDecompilerSettings;
 			return other is not null && decompilerSettings.Equals(other.decompilerSettings);
 		}
 

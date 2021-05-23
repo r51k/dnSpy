@@ -26,8 +26,6 @@ namespace dnSpy.Roslyn.Internal {
 			switch (glyph) {
 			case MSCA.Glyph.None: return Glyph.None;
 			case MSCA.Glyph.Assembly: return Glyph.Assembly;
-			case MSCA.Glyph.BasicFile: return Glyph.BasicFile;
-			case MSCA.Glyph.BasicProject: return Glyph.BasicProject;
 			case MSCA.Glyph.ClassPublic: return Glyph.ClassPublic;
 			case MSCA.Glyph.ClassProtected: return Glyph.ClassProtected;
 			case MSCA.Glyph.ClassPrivate: return Glyph.ClassPrivate;

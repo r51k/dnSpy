@@ -159,11 +159,6 @@ namespace dnSpy.Contracts.Settings.Dialog {
 		public const string GUID_CODE_EDITOR_CSHARP_ROSLYN = "A5170115-EC2C-495E-BBAC-0A67E311CAF6";
 
 		/// <summary>
-		/// Guid of Visual Basic (Roslyn) code editor settings
-		/// </summary>
-		public const string GUID_CODE_EDITOR_VISUAL_BASIC_ROSLYN = "A863FFDA-2AD2-4DB4-B5D4-B2363F3D450F";
-
-		/// <summary>
 		/// Guid of Text Viewer settings page
 		/// </summary>
 		public const string GUID_DOCUMENT_VIEWER = "DEFBC59F-8FB1-4DC1-8067-B006BE07B6DA";
@@ -182,11 +177,6 @@ namespace dnSpy.Contracts.Settings.Dialog {
 		/// Guid of C# (Roslyn) REPL settings
 		/// </summary>
 		public const string GUID_REPL_CSHARP_ROSLYN = "4A391B5A-8A9F-485E-9E48-76FEEAD0176B";
-
-		/// <summary>
-		/// Guid of Visual Basic (Roslyn) REPL settings
-		/// </summary>
-		public const string GUID_REPL_VISUAL_BASIC_ROSLYN = "7C275A4E-348E-4620-A292-60DAC69AFF7D";
 
 		/// <summary>
 		/// Guid of Hex Editor settings page
@@ -228,12 +218,7 @@ namespace dnSpy.Contracts.Settings.Dialog {
 		/// </summary>
 		public const double ORDER_COMPILER_SETTINGS_CSHARP = 10000;
 
-		/// <summary>
-		/// Order of Compiler / Visual Basic
-		/// </summary>
-		public const double ORDER_COMPILER_SETTINGS_VISUALBASIC = 11000;
-
-		/// <summary>
+		/// <summary>V
 		/// Start of language options
 		/// </summary>
 		public const double ORDER_CODE_EDITOR_LANGUAGES = 10000;

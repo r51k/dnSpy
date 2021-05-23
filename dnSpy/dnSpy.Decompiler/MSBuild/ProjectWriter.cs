@@ -112,7 +112,6 @@ namespace dnSpy.Decompiler.MSBuild {
 				writer.WriteEndElement();
 
 				// Debug property group
-				var noWarnList = GetNoWarnList();
 				writer.WriteStartElement("PropertyGroup");
 				writer.WriteAttributeString("Condition", $" '$(Configuration)|$(Platform)' == 'Debug|{project.Platform}' ");
 				writer.WriteElementString("PlatformTarget", project.Platform);
@@ -127,8 +126,6 @@ namespace dnSpy.Decompiler.MSBuild {
 					writer.WriteElementString("NoStdLib", "true");
 				if (project.AllowUnsafeBlocks)
 					writer.WriteElementString("AllowUnsafeBlocks", "true");
-				if (noWarnList is not null)
-					writer.WriteElementString("NoWarn", noWarnList);
 				writer.WriteEndElement();
 
 				// Release property group
@@ -145,8 +142,6 @@ namespace dnSpy.Decompiler.MSBuild {
 					writer.WriteElementString("NoStdLib", "true");
 				if (project.AllowUnsafeBlocks)
 					writer.WriteElementString("AllowUnsafeBlocks", "true");
-				if (noWarnList is not null)
-					writer.WriteElementString("NoWarn", noWarnList);
 				writer.WriteEndElement();
 
 				// GAC references
@@ -217,7 +212,7 @@ namespace dnSpy.Decompiler.MSBuild {
 				Write(writer, BuildAction.SplashScreen);
 
 				writer.WriteStartElement("Import");
-				writer.WriteAttributeString("Project", GetLanguageTargets());
+				writer.WriteAttributeString("Project", @"$(MSBuildToolsPath)\Microsoft.CSharp.targets");
 				writer.WriteEndElement();
 
 				writer.WriteEndElement();
@@ -340,17 +335,9 @@ namespace dnSpy.Decompiler.MSBuild {
 		}
 
 		string? GetAppDesignerFolder() {
-			if (project.Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return null;
 			if (projectVersion >= ProjectVersion.VS2017)
 				return null;
 			return project.PropertiesFolder;
-		}
-
-		string? GetNoWarnList() {
-			if (project.Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return "41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314";
-			return null;
 		}
 
 		string GetRootNamespace() {
@@ -365,14 +352,6 @@ namespace dnSpy.Decompiler.MSBuild {
 			if (project.Module is ModuleDefMD mod)
 				return mod.Metadata.PEImage.ImageNTHeaders.OptionalHeader.FileAlignment.ToString();
 			return "512";
-		}
-
-		string GetLanguageTargets() {
-			if (project.Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_CSHARP)
-				return @"$(MSBuildToolsPath)\Microsoft.CSharp.targets";
-			if (project.Options.Decompiler.GenericGuid == DecompilerConstants.LANGUAGE_VISUALBASIC)
-				return @"$(MSBuildToolsPath)\Microsoft.VisualBasic.targets";
-			return @"$(MSBuildToolsPath)\Microsoft.CSharp.targets";
 		}
 
 		string? GetHintPath(AssemblyDef? asm) {

@@ -1318,9 +1318,6 @@ Filtre Assembly Explorer seçeneklerinden değiştirilebilir.</value>
   <data name="CopyUTF8StringCommand" xml:space="preserve">
     <value>UTF-8 dizisini kopyala</value>
   </data>
-  <data name="CopyVisualBasicArrayCommand" xml:space="preserve">
-    <value>Visual Basic dizisini kopyala</value>
-  </data>
   <data name="FillSelectionCommand" xml:space="preserve">
     <value>Bit ile seçimi doldur...</value>
   </data>

@@ -49,9 +49,9 @@ namespace dnSpy.Decompiler.ILSpy.Core.CSharp {
 		}
 
 		public IEnumerable<IDecompiler> Create() {
-			yield return new CSharpDecompiler(decompilerSettingsService.CSharpVBDecompilerSettings, DecompilerConstants.CSHARP_ILSPY_ORDERUI);
+			yield return new CSharpDecompiler(decompilerSettingsService.CSharpDecompilerSettings, DecompilerConstants.CSHARP_ILSPY_ORDERUI);
 #if DEBUG
-			foreach (var l in CSharpDecompiler.GetDebugDecompilers(decompilerSettingsService.CSharpVBDecompilerSettings))
+			foreach (var l in CSharpDecompiler.GetDebugDecompilers(decompilerSettingsService.CSharpDecompilerSettings))
 				yield return l;
 #endif
 		}
@@ -68,16 +68,16 @@ namespace dnSpy.Decompiler.ILSpy.Core.CSharp {
 		Predicate<IAstTransform>? transformAbortCondition = null;
 
 		public override DecompilerSettingsBase Settings => langSettings;
-		readonly CSharpVBDecompilerSettings langSettings;
+		readonly CSharpDecompilerSettings langSettings;
 
-		public CSharpDecompiler(CSharpVBDecompilerSettings langSettings, double orderUI) {
+		public CSharpDecompiler(CSharpDecompilerSettings langSettings, double orderUI) {
 			this.langSettings = langSettings;
 			createBuilderCache = () => new BuilderCache(this.langSettings.Settings.SettingsVersion);
 			OrderUI = orderUI;
 		}
 
 #if DEBUG
-		internal static IEnumerable<CSharpDecompiler> GetDebugDecompilers(CSharpVBDecompilerSettings langSettings) {
+		internal static IEnumerable<CSharpDecompiler> GetDebugDecompilers(CSharpDecompilerSettings langSettings) {
 			DecompilerContext context = new DecompilerContext(0, new ModuleDefUser("dummy"), CSharpMetadataTextColorProvider.Instance);
 			string lastTransformName = "no transforms";
 			double orderUI = DecompilerConstants.CSHARP_ILSPY_DEBUG_ORDERUI;

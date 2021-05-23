@@ -33,11 +33,6 @@ namespace dnSpy.Contracts.Hex {
 		HexCSharp,
 
 		/// <summary>
-		/// Use a &amp;H prefix
-		/// </summary>
-		HexVisualBasic,
-
-		/// <summary>
 		/// Use a h suffix
 		/// </summary>
 		HexAssembly,
